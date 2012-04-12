@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  $('#submit').click(addItem);
-  $('.delete').live('click', function() {
-    $(this).parent().remove();
-	  count--;
-	  $('#count').text(count);
-  });
+	$('#submit').click(addItem);
+	$('.delete').live('click', function() {
+		$(this).parent().remove();
+		count--;
+		$('#count').text(count);
+	});
 });
 
 var count = 1;
