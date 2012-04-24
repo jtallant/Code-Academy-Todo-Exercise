@@ -1,12 +1,3 @@
-$(document).ready(function() {
-	$('#submit').click(addItem);
-	$('.delete').live('click', function() {
-		$(this).parent().remove();
-		count--;
-		$('#count').text(count);
-	});
-});
-
 var count = 1;
 
 function addItem() {
@@ -16,3 +7,12 @@ function addItem() {
 	count++;
 	$('#count').text(count);
 }
+
+$(document).ready(function() {
+	$('#submit').click(addItem);
+  	$('.delete').live('click', function() {
+		$(this).parent().remove();
+		count--;
+		$('#count').text(count);
+	});
+});
