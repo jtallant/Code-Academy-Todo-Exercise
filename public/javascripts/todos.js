@@ -14,7 +14,7 @@ function addItem() {
 
 function deleteItem() {
 	$(this).parent().remove();
-	count -= 1;
+	count--;
 	$('#count').text(count);
 }
 
