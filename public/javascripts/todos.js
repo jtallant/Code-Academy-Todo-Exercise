@@ -1,3 +1,7 @@
+/*global $, document */
+
+(function() {
+
 var count = 1;
 
 function addItem() {
@@ -8,11 +12,15 @@ function addItem() {
 	$('#count').text(count);
 }
 
+function deleteItem() {
+	$(this).parent().remove();
+	count -= 1;
+	$('#count').text(count);
+}
+
 $(document).ready(function() {
 	$('#submit').click(addItem);
-  	$('.delete').live('click', function() {
-		$(this).parent().remove();
-		count--;
-		$('#count').text(count);
-	});
+	$('#todos').on('click', '.delete', deleteItem);
 });
+
+})();
